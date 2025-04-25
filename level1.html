@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby's First CTF: Cryptography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="level1.css" />
+</head>
+<body>
+<div class="container">
+    <div class="section">
+<h1>Introduction to Cryptography</h1>
+<p>Cryptography is the practice of encoding/scrambling information so that only the intended recipient can read it. This helps protect sensitive data from unauthorized access. In Cryptography, messages are transformed from plaintext to unreadable formats using specific techniques called <b>ciphers</b>. Once encoded, the information can only be decoded by someone who knows how to reverse the process.</p>
+<img src="cipher.png" alt="Cipher Diagram" class="cipherDiagram">
+<h2>Seems simple enough, right?</h2>
+<p>There's a lot of different ways an indivudual can encode information. There's a lot of different ciphers out there, which can seem overwhelming. Have no fear, sometimes a simple Google search can help us identify what process was used. </p>
+
+
+<h3>Here are a few types of encoding:</h3>
+<ul>
+    <li><b>Base64:</b> A way to encode data in a format that's readable, and also reversible.</li>
+    <li><b>ROT13:</b> A method that shifts letters 13 characters forward in the alphabet.</li>
+    <li><b>Hexadecimal:</b> A way to present text in a numerical format, used in computing.</li>
+</ul>
+</div>
+
+<hr/>
+
+<div class="section">
+<h1>Let's do a Simple Walkthrough: Hexadecimal Decoding</h1>
+<p>Let's start with an easy example. Here's a message encoded in <b>Hexadecimal</b>:</p>
+<p>48 65 6C 6C 6F 20 57 6F 72 6C 64 21</p>
+Each of these values represents a character in the ASCII encoding system. <b>ASCII</b> is a standard data-encoding format for electronic communication between computers. ASCII assigns standard numeric values to letters, numerals, punctuation marks, and other characters used in computers. Try to decode by converting each pair of hexadecimal digits into their character equivalent! </br>
+
+<p>How do we go about solving this?</p>
+<ol>
+    <li>You can Google the conversions for each piece of the encoded Hexadecimal message. For example, <b>48</b> in hex = <b>H</b>.</li>
+    <li>Another way is to utilize online tools that decode messages. Two great resources are <a href="https://gchq.github.io/CyberChef/" target="_new">CyberChef</a> and <a href="https://www.dcode.fr/en" target="_new">dCode</a>. These resources allow you to input your encoded message and will generate the decoded text for you. Pretty neat, right?</li>
+</ol>
+
+</div>
+<hr/>
+
+<div class="section">
+    <h1>Now You Try: Base64 Decoding</h1>
+    <h3>Base64 is an encoding scheme used to convert binary data into text format. This is commonly used in data transferring, cryptography, and hiding text in basic CTF challenges!</h3>
+    <p>Example: Encoding <code>Hello</code> in Base64 gives <code>SGVsbG8=</code>.</p>
+
+    <h3>Decode the following:</h3>
+    <p>The encoded message: <b>U29sdmUgdGhpcyBjaGFsbGVuZ2Uh</b></p>
+    <button onclick="viewHint()">View Hint?</button>
+    <button onclick="hideHint()">Hide Hint</button>
+    <p id="hint" class="hidden">Try using an online Base64 decoder like <a href="https://gchq.github.io/CyberChef/" target="_new">CyberChef</a>.</p>
+    <input type="text" id="userInput" placeholder="Enter decoded text">
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="result"></p>
+
+    <div id="nextLevel"></div> 
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>

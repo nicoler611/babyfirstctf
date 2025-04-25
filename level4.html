@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby's First CTF: Source of the Flag</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="level4.css" />
+</head>
+<body>
+    <div>
+        <h1>Metadata Matters</h1>
+        <h3>To put it simply, Metadata is <i>data about data.</i> When you take a photo or download an image, details like the data, camera make, exposure, and more are stored within the image file itself. This is called EXIF metadata.</h3>
+        <p>To extract metadata from an image, you can:</p>
+        <ul>
+            <li>Use an online EXIF viewer, like <a href="https://jimpl.com/" target="_new">Jimpl</a>.</li>
+            <li>Use command-line (a text-based interface allowing users to interact with a computer) tools like <code>exiftool</code> or <code>exiv2</code></li>
+            <li>Check properties of the file on your computer (Right clicking on an image, going to Properties on Windows or Get Info on macOS)</li>
+        </ul>
+        <p>Let's try this out together. Download the image below and analyze its metadata to answer the following questions.</p>
+        <p><i>To download, right-click on the image and select "Save Image As"</i></p>
+        
+        <img src="DSCN1817.jpg" class="metadataimg">
+        <p>Trust me, there's more to this image than just it being a .jpg file!</p>
+
+        <h2>What can you tell me based on the Metadata?</h2>
+        <form id="metadataQuiz">
+            <label>When was the image created? (Format MM-DD-YYYY)
+                <input type="text" id="q1" placeholder="MM-DD-YYYY">
+            </label>
+            <br>
+            <label>What is the make of the camera?
+                <input type="text" id="q2" placeholder="Input Camera Make">
+            </label>
+            <br>
+            <label>Is the flash on in this photo?
+                <input type="text" id="q3" placeholder="Yes/No">
+            </label>
+            <br>
+            <label>What is the focal length? (Don't include mm)
+                <input type="text" id="q4" placeholder="Focal Length">
+            </label>
+            <br>
+            <label>What is the light value of the image?
+                <input type="text" id="q5" placeholder="Light Value">
+            </label>
+            <br>
+            <button type="button" onclick="checkAnswers()">Submit</button>
+        </form>
+
+        <p id="result"></p>
+        <div id="buttonContainer">
+            <button id="nextLevelButton" style="display: none;">Go to Level 5</button>
+
+           <!--<button id="nextLevelButton" style="display: none; align-self: center;" onclick="goLevel5()">Go to Level 5</button> --> 
+       
+        </div>
+    </div>
+
+    <script src="level4.js"></script>
+</body>

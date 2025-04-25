@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(179, 197, 217);
+    color:black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    margin-top: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    background-color: #5a5a86; /* Dark background */
+    padding: 15px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+}
+
+.logo {
+    height: 50px; /* Adjust as needed */
+    width: auto;
+    margin-left: 20px; /* Moves logo a bit from the left edge */
+}
+
+.website-name {
+    margin-left: 15px; /* Space between logo and text */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: rgb(72, 66, 66);
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 20px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.3 ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #2ecc71;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.6);
+}
+
+/* Button Styling */
+button {
+    padding: 12px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 50px;
+}
+
+button:disabled {
+    background-color: #b6b6b6;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Flag Message Styling */
+#flagMessage {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2ecc71;
+    text-align: center;
+    width: 100%;
+}
+
+#flag {
+    font-size: 18px;
+    color: #e74c3c;
+    display: inline-block;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby's First CTF: Source of the Flag</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="level3.css" />
+</head>
+<body>
+    <div>
+        <h1>Source of the Flag</h1>
+    
+    <h3>Welcome to Level 3! Sometimes, flags can simply be hidden somewhere within the website. That can mean a couple of things, so let's go over how you may be able to find a hidden flag.</h3>
+    <ol>
+        <li><b>Use inspect element:</b> This opens the browser's developer tools, where users can explore HTML, CSS, JavaScript, and the network requests. The HTML elements could include the flag.</li>
+        <li><b>Browser Console:</b> The flag could be logged to the browser console. JavaScript, which is a pogramming language use often for web development might be set to print out the flag when a certain event occurs.</li>
+        <li><b>Check Cookies:</b> Flags could be stored in cookies! In developer tools, by navigating to "Application", you can look for cookies set by the website. Inspect the values for hidden flags.
+        </li>
+        <li><b>View Source Code:</b> By viewing the page souce, the flag could be embedded in the HTML under certain elements. You can view the page source by right-clicking anywhere on the webpage. </li>
+        <li><b>Explore every inch:</b> highlight the website for hidden text, look at the url, look at any media files on the page.</li>
+    </ol>
+
+    <!--Hey there... this is your hidden flag! Copy and paste the
+    flag into the answer box to move to level 4!
+    FLAG: babyfirstCTF{SOURCE_OF_THE_FLAG}-->
+
+    <p>Once you find the flag, enter it below:</p>
+    <input type="text" id="userFlagInput" placeholder="Enter Flag:">
+    <button onclick="checkFlag()">Submit Flag</button>
+    <p id="flagResult"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>

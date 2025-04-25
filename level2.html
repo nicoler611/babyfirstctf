@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby's First CTF: Password Cracking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="level2.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Password Cracking Basics</h1>
+        <p>Before we can touch specifically on password cracking, we must understand what hashing is.</p>
+
+        <h3>What is hashing?</h3>
+        <p>Passwords and other sensitive data are not stored in plaintext, meaning if your password is abc123, a database will not store that password as abc123.</p>
+        <p>Instead, the plaintext is converted into a fixed-size string of characters using cryptographic algorithms. The idea is that the hash value is stored, and you cannot easily retrieve the original plaintext password from the hash.</p>
+        <p>There are a lot of hashing algorithms out there. Here are a few popular hash types that you see in CTFS:</p>
+        <ul>
+            <li>MD5, SHA (SHA256, SHA2, etc.), CRC</li>
+        </ul>
+        
+        <h3>Why do we use hashing?</h3>
+        <p>Hashing is used to securely store passwords in databases. If a hacker were to get access to a company's database and every sensitive piece of data was stored in plaintext, this would increase risk of data breaches that are hard to recover from.</p>
+        <p><b>Think of it like this:</b> You wouldn't want a hacker to easily access something like your password, right? That's why hashing provides an extra layer of security.</p>
+
+        <h3>A Little Information about MD5</h3>
+        <p>MD5 is a type of hash function algorithm, generating a 128-bit hash value (represented as a 32 character string) from any input of data.</p>
+        <ul>
+            <li>
+                <b>Plaintext:</b> password123
+            </li>
+            <li><b>MD5 Hash:</b> 482c811da5d5b4bc6d497ffa98491e38</li>
+        </ul>
+    </div>
+    <hr/>
+    <div>
+        <h1>Cracking an MD5 Hash</h1>
+        <h3>What is Password Cracking?</h3>
+        <p>Password Cracking is the process of trying to find the original plaintext from a hash, often using techniques like brute-forcing or predefined wordlists.</p>
+        <h3>How Attackers User MD5 Hashes:</h3>
+        <ol>
+            <li>Brute-Force: Trying every possible combination of characters until the hash matches.</li>
+            <li>Dictionary Attacks: Use a list of common passwords (a.k.a a dictionary) to see if any match the hash.</li>
+        </ol>
+        <p><b>BE WARNED!</b> MD5 is considered <i>insecure</i> due to how fast hackers can crack the hashes using methods like brute-force attacks. This makes MD5 unsuitable for modern security standards.</p>
+    </div>
+    <hr/>
+    <div>
+        <h1>Now You Try: Crack that Hash!</h1>
+        <h3>Cracking hashes can vary in difficulty depending on the hash you are trying to crack. For this challenege, we will go with an easy to solve hash. Don't be afraid to use Google for some open source intelligence!</h3>
+        <p>Example: Cracking the MD5 hash <code>482c811da5d5b4bc6d497ffa98491e38</code> gives <code>password123</code>.</p>
+        <p>Try Cracking The Following MD5 Hash:</p>
+        
+        <b>MD5 Hash:</b> <code>cc8b1415557f58abf2e2fa83c2ea6c91</code></br>
+        <button onclick="viewHint()">View Hint?</button>
+        <button onclick="hideHint()">Hide Hint</button>
+        
+        <p id="hint" class="hidden">Try using an online password hash cracker like <a href="https://crackstation.net/" target="_new">crackstation</a>.</p>
+        <input type="text" id="userInput" placeholder="Enter cracked password">
+        <button onclick="checkHash()">Submit</button>
+        <p id="result"></p>
+        <div id="nextLevel3"></div> 
+    </div>
+
+    <script src="script.js"></script>
+</body>

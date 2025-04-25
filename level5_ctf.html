@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby's First CTF: Final Level</title>
+    <link rel="stylesheet" href="lockedLogin.css">
+</head>
+<div class="banner">
+    <img src="baby.png" alt="babyfirstctflogo" class="logo">
+    <span class="website-name">BabysFirstCTF.com</span>
+</div>
+<body>
+    <div class="container">
+    <h1>Admin Portal Login</h1>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="admin" readonly><br><br>
+        <!--Hint: The login button is only unlocked on the IT manager's workstation. unless...?-->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" value="adminpassword" readonly><br><br>
+        
+    
+
+        <button type="button" id="loginButton" disabled>Login</button>
+    </form>
+
+    <p id="flagMessage" style="display: none;">Congratulations! Your Final Flag is: <span id="flag"></span> </p>
+
+        <input type="text" id="userFinalInput" placeholder="Enter final flag">
+        <button onclick="checkFinalFlag()">Submit</button>
+        <p id="finalResult"></p>
+        <div id="gamesOver"></div> 
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

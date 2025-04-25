@@ -1,0 +1,86 @@
+body {
+    font-family: 'Noto Sans Mono', monospace;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+div {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #0f0f1f;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 150, 0.3);
+}
+
+h1 {
+    color: #4aff40;
+    font-size: 26px;
+    text-shadow: 0 0 8px rgba(163, 255, 175, 0.8);
+}
+
+h3 {
+    color: #00eaff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+ol {
+    text-align: left;
+    background-color: #111;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+ol li {
+    margin-bottom: 10px;
+    color: #ededed;
+}
+
+code {
+    font-size: 14px;
+    background-color: #222;
+    padding: 5px;
+    border-radius: 5px;
+    color: #50fa7b;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #8be9fd;
+    background-color: #282a36;
+    color: #ffffff;
+    text-align: center;
+}
+
+button {
+    background: linear-gradient(45deg, #50fa7b, #00eaff);
+    color: #0f0f1f;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #00eaff, #50fa7b);
+    transform: scale(1.05);
+}
+
+.hidden-flag {
+    display: none;
+}
+
+#flagResult {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
