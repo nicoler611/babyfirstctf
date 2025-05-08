@@ -17,7 +17,7 @@ function checkAnswer() {
 }
 
 const hashToPlaintext = {
-    "cc8b1415557f58abf2e2fa83c2ea6c91": "challenge",
+    "cc8b1415557f58abf2e2fa83c2ea6c91": "cracked",
 };
 
 function checkHash() {
